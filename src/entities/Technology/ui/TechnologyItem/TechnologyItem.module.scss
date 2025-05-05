@@ -1,0 +1,48 @@
+.TechnologyItem {
+  padding-bottom: 36px;
+
+  &:last-child {
+    padding-bottom: 16px;
+  }
+}
+
+.title {
+  position: relative;
+  flex-basis: 190px;
+  min-width: 190px;
+  padding-right: 16px;
+  font-size: 18px;
+  letter-spacing: .5px;
+  color: var(--icon-redesigned);
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 4px;
+    right: -8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--accent-redesigned);
+    animation: 4s ease-in-out infinite colorAnimation;
+  }
+}
+
+@keyframes colorAnimation {
+  from {
+    background-color: var(--accent-redesigned);
+  }
+  to {
+    background-color: var(--icon-redesigned);
+  }
+}
+
+.description {
+  padding-left: 50px;
+
+  span {
+    color: var(--accent-redesigned);
+    font-weight: 600;
+  }
+}
+

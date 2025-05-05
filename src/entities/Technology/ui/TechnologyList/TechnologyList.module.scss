@@ -1,0 +1,20 @@
+.TechnologyList {
+  position: relative;
+  padding-top: 16px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left: 190px;
+    background-color: var(--accent-redesigned);
+  }
+}
+
+.title {
+  padding-top: 8px;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}

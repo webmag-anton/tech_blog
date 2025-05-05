@@ -1,0 +1,11 @@
+.NotificationItem{
+    width: calc(100% - 2px);
+}
+
+.link {
+    width: 100%;
+}
+
+.NotificationItem:hover {
+    background-color: var(--light-bg-redesigned);
+}

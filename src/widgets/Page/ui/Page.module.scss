@@ -1,0 +1,18 @@
+.Page {
+  flex-grow: 1;
+  flex-shrink: 100;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+  padding: 20px 20px 20px 45px;
+  flex-shrink: 100;
+}
+
+.PageRedesigned {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.trigger {
+  height: 20px;
+  margin: 10px;
+}

@@ -1,0 +1,24 @@
+{
+  "technologies": {
+    "framework": "Framework / Library",
+    "typescript": "Typing",
+    "architecture": "Architecture",
+    "configuration": "Configuration and infrastructure",
+    "data": "Work with data and requests to server",
+    "features": "App's features",
+    "ui": "UI",
+    "optimisation": "Optimisation",
+    "testing": "Testing"
+  },
+  "descriptions": {
+    "framework": "**React**",
+    "typescript": "To ensure strict typing of **JavaScript**, the application was developed using **TypeScript**",
+    "architecture": "The application's architecture follows the **Feature Sliced Design** methodology, ensuring modularity, reusability, and unidirectional data flow",
+    "configuration": "The infrastructure is configured in such a way that the project itself, the test environment, and Storybook can all utilize the features and work as a cohesive unit (e.g., TypeScript, CSS modules, global assembly variables, etc.). \n- **Webpack** is used as a bundler with a complete project configuration \n- Stories for each component and all its states are described using **Storybook** \n- **ESlint** for linting and **Prettier** for formatting were also used \n- A **CI pipeline** was configured in the project to run three types of tests, build the project and Storybook, and run linters \n- **Pre-commit hooks** were also set up using Husky \n- **Report generation for unit and screenshot tests**, including information about successful and failed tests, was implemented",
+    "data": "**Redux Toolkit** is used as a state manager, and **RTK Query** is used for requests to the json-server",
+    "features": "**Authorisation, filters, search, sorting, pagination, comments, internationalisation (i18n), theming, two interface options (old and new), notifications, routing, article rating**. \n Besides, the application implements concepts such as **feature flags** (the ability to enable/disable features based on certain conditions) and **JSON settings** (user settings stored on the backend)",
+    "ui": "The **custom-developed UI kit** is used for this app. More than 20 UI components, including modal windows with portals, dropdown lists\/menus, sidebar, buttons with different themes, skeletons, popups, lazy images, drawer, avatars, vertical and horizontal stacks, etc. Additionally, **three color themes** are implemented in the application",
+    "optimisation": "To optimise the application, an analysis of bundle size and elimination of unnecessary re-renders were performed. **Code splitting** was implemented by **lazy loading components and Redux reducers**. Additionally, **data normalization, virtualization** (virtual scroll), and techniques like **throttling, debouncing**, **endpoint injection**, and **asynchronous loading of libraries** (for animations and drag and drop) were used to further enhance performance",
+    "testing": "The project uses 4 types of tests: \n- **Unit tests** with **Jest** \n- **Component tests** using **React Testing Library (RTL)** \n- **Screenshot testing** for interface regression using **Loki** \n- **End-to-End (E2E) testing** with **Cypress**"
+  }
+}

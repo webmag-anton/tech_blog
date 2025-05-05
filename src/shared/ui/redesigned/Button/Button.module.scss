@@ -1,0 +1,107 @@
+.Button {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  color: var(--text-redesigned);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent-redesigned);
+
+    .addonLeft svg, .addonRight svg {
+      color: var(--accent-redesigned);
+    }
+  }
+}
+
+.withAddon {
+  padding: 0 16px;
+}
+
+.addonLeft, .addonRight {
+  display: flex;
+}
+
+.addonLeft {
+  margin-right: 5px;
+}
+
+.addonRight {
+  margin-left: 5px;
+}
+
+.addonLeft svg, .addonRight svg {
+  color: var(--icon-redesigned);
+}
+
+.clear {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.filled {
+  border: none;
+  border-radius: 34px;
+  background: var(--light-bg-redesigned);
+  outline: none;
+}
+
+.outline {
+  border-radius: 34px;
+  background: none;
+
+  &:hover {
+    border: 2px solid var(--accent-redesigned);
+  }
+
+  &.normal {
+    border: 2px solid var(--icon-redesigned);
+  }
+  &.error {
+    border: 2px solid var(--cancel-redesigned);
+  }
+  &.success {
+    border: 2px solid var(--save-redesigned);
+  }
+}
+
+.square {
+  padding: 0;
+}
+
+.square.m {
+  width: var(--font-line-m);
+  height: var(--font-line-m);
+}
+
+.square.l {
+  width: var(--font-line-l);
+  height: var(--font-line-l);
+}
+
+.square.xl {
+  width: var(--font-line-xl);
+  height: var(--font-line-xl);
+}
+
+.m {
+  font: var(--font-m-redesigned);
+}
+
+.l {
+  font: var(--font-l-redesigned);
+}
+
+.xl {
+  font: var(--font-xl-redesigned);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.fullWidth {
+  width: 100%;
+}

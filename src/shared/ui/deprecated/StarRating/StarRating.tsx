@@ -60,8 +60,10 @@ export const StarRating = memo((props: StarRatingProps) => {
       )}
     >
       {stars.map((starNumber) => {
+        const clickable = !isSelected
+
         const commonProps = {
-          key: starNumber,
+          ...(clickable ? { clickable: true } : {}),
           className: classNames(
             cls.starIcon,
             { [cls.selected]: isSelected },

@@ -1,8 +1,10 @@
 import { FeatureFlags } from '@/shared/types/featureFlags'
 import { LOCAL_STORAGE_LAST_DESIGN_KEY } from '@/shared/const/localstorage'
 
+const lastDesign = localStorage.getItem(LOCAL_STORAGE_LAST_DESIGN_KEY)
+
 const defaultFeatures = {
-  isAppRedesigned: localStorage.getItem(LOCAL_STORAGE_LAST_DESIGN_KEY) === 'new'
+  isAppRedesigned: lastDesign === 'new' || lastDesign === null
 }
 
 let featureFlags: FeatureFlags = { ...defaultFeatures }

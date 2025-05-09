@@ -1,10 +1,11 @@
-import { memo, ReactNode } from 'react'
+import { memo, ReactNode, forwardRef } from 'react'
 import { NavLink, LinkProps } from 'react-router-dom'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './AppLink.module.scss'
 
 export type AppLinkVariant = 'primary' | 'red'
 
+/* eslint-disable react/no-unused-prop-types */
 interface AppLinkProps extends LinkProps{
   className?: string
   variant?: AppLinkVariant
@@ -12,7 +13,7 @@ interface AppLinkProps extends LinkProps{
   activeClassName?: string
 }
 
-export const AppLink = memo((props: AppLinkProps) => {
+export const AppLink = memo(forwardRef<HTMLAnchorElement, AppLinkProps>((props, ref) => {
   const {
     to,
     className,
@@ -24,6 +25,7 @@ export const AppLink = memo((props: AppLinkProps) => {
 
   return (
     <NavLink
+      ref={ref}
       to={to}
       className={({ isActive }) => classNames(
         cls.AppLink,
@@ -35,4 +37,4 @@ export const AppLink = memo((props: AppLinkProps) => {
       {children}
     </NavLink>
   )
-})
+}))

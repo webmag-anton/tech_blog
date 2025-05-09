@@ -1,4 +1,4 @@
-import { memo, ReactNode } from 'react'
+import { memo, ReactNode, forwardRef } from 'react'
 import { Link, LinkProps } from 'react-router-dom'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './AppLink.module.scss'
@@ -9,7 +9,8 @@ export enum AppLinkTheme {
   RED = 'red'
 }
 
-interface AppLinkProps extends LinkProps{
+/* eslint-disable react/no-unused-prop-types */
+interface AppLinkProps extends LinkProps {
   className?: string
   theme?: AppLinkTheme
   children?: ReactNode
@@ -18,7 +19,7 @@ interface AppLinkProps extends LinkProps{
 /**
  * @deprecated
  */
-export const AppLink = memo((props: AppLinkProps) => {
+export const AppLink = memo(forwardRef<HTMLAnchorElement, AppLinkProps>((props, ref) => {
   const {
     to,
     className,
@@ -29,6 +30,7 @@ export const AppLink = memo((props: AppLinkProps) => {
 
   return (
     <Link
+      ref={ref}
       to={to}
       className={classNames(cls.AppLink, {}, [className, cls[theme]])}
       {...otherProps}
@@ -36,4 +38,4 @@ export const AppLink = memo((props: AppLinkProps) => {
       {children}
     </Link>
   )
-})
+}))
